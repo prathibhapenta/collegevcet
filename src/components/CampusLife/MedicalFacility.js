@@ -2,7 +2,7 @@ import React from 'react'
 
 const MedicalFacility = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>Medical Facility</h5>
     </div>
   )

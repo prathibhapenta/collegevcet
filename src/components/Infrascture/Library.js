@@ -2,8 +2,8 @@ import React from 'react'
 
 const Library = () => {
   return (
-    <div>
-      <h3>Library</h3>
+    <div className='notpermited-content'>
+      <h5>Library</h5>
     </div>
   )
 }

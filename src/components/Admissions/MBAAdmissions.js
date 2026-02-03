@@ -2,7 +2,7 @@ import React from 'react'
 
 const MBAAdmissions = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>MBA Admissions</h5>
     </div>
   )

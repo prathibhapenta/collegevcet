@@ -2,8 +2,8 @@ import React from 'react'
 
 const DigitalLibrary = () => {
   return (
-    <div>
-      <h3>DigitalLibrary</h3>
+    <div className='notpermited-content'>
+      <h5>DigitalLibrary</h5>
     </div>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Iqac = () => {
   return (
-    <div>
-      <h1>IQAC</h1>
+    <div className='notpermited-content'>
+      <h5>IQAC</h5>
     </div>
   )
 }

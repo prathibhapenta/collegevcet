@@ -82,11 +82,11 @@ import TransportRoutes from './components/Transport/TransportRoutes';
 import TransportFee from './components/Transport/TransportFee';
 import Auditorium from './components/CampusLife/Auditorium';
 import Cafeteria from './components/CampusLife/Cafeteria';
-import Drawinghall from './components/CampusLife/Drawinghall';
+// import Drawinghall from './components/CampusLife/Drawinghall';
 import Internet from './components/CampusLife/Internet';
 import MedicalFacility from './components/CampusLife/MedicalFacility';
 import PotableWater from './components/CampusLife/PotableWater';
-import Seminarhall from './components/CampusLife/Seminarhall';
+// import Seminarhall from './components/CampusLife/Seminarhall';
 import Sports from './components/CampusLife/Sports';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -97,7 +97,9 @@ const App = () => {
     <div>
      
        {!isHome && <Navbar />}
+       <div className="main-content">
       <Routes>
+        
         <Route path='/' element = {<Home/>}/>
         <Route path='/aboutus' element = {<Aboutus/>} />
          <Route path="/iqac" element={<Iqac />} />
@@ -161,16 +163,17 @@ const App = () => {
         <Route path="/about-us/the-college" element={<TheCollege />} />
         <Route path="/about-us/management" element={<TheManagement />} />
         <Route path="/about-us/principal" element={<Principal />} />
-        <Route path="/about-us/governing-body" element={<GoverningBody />} />
-        <Route path="/about-us/college-academic-council" element={<CollegeAcademicCouncil />}/>
         <Route path="/about-us/organizational-chart" element={<OrganizationalChart />} />
+        <Route path="/about-us/governance-manual" element={<GovernanceManual />} />
+        <Route path="/about-us/governing-body" element={<GoverningBody />} />
+        <Route path="/about-us/e-governance" element={<EGovernance />} />
+        <Route path="/about-us/college-academic-council" element={<CollegeAcademicCouncil />}/>
         <Route path="/about-us/jntuh-affiliation" element={<JNTUHAffiliation />} />
         <Route path="/about-us/aicte-approval" element={<AICTEApproval />} />
         <Route path="/about-us/naac-certificate" element={<NAACCertificate />} />
         <Route path="/about-us/self-declaration" element={<SelfDeclaration />} />
         <Route path="/about-us/undertaking" element={<Undertaking />} />
-        <Route path="/about-us/governance-manual" element={<GovernanceManual />} />
-        <Route path="/about-us/e-governance" element={<EGovernance />} />
+     
         <Route path="/about-us/mou" element={<Mou />} />
         <Route path="/infrascture/administrative-block" element={<AdministrativeBlock />} />
         <Route path="/infrascture/library" element={<Library />} />
@@ -180,11 +183,11 @@ const App = () => {
         
           <Route path="/campuslife/auditorium" element={<Auditorium />} />
           <Route path="/campuslife/cafeteria" element={<Cafeteria />} />
-          <Route path="/campuslife/drawinghall" element={<Drawinghall />} />
+          {/* <Route path="/campuslife/drawinghall" element={<Drawinghall />} /> */}
           <Route path="/campuslife/internet" element={<Internet />} />
           <Route path="/campuslife/medical-facility" element={<MedicalFacility />} />
           <Route path="/campuslife/potable-water" element={<PotableWater />} />
-          <Route path="/campuslife/seminarhall" element={<Seminarhall />} />
+          {/* <Route path="/campuslife/seminarhall" element={<Seminarhall />} /> */}
           <Route path="/campuslife/sports" element={<Sports />} />
         {/* transport*/}
         <Route path="/transport/about-transport" element={<AboutTransport />} />
@@ -195,6 +198,7 @@ const App = () => {
       <ScrollToTop />
       <Footer/>
   
+    </div>
     </div>
   )
 }

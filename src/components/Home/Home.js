@@ -19,15 +19,15 @@ import {
 } from "react-icons/fa";
 
 
-const TeamCard = ({ img, name, role }) => (
-  <div className="team-card">
-    <div className="team-img-box">
-      <img src={img} alt={name} />
-    </div>
-    <h3>{name}</h3>
-    <p>{role}</p>
-  </div>
-);
+// const TeamCard = ({ img, name, role }) => (
+//   <div className="team-card">
+//     <div className="team-img-box">
+//       <img src={img} alt={name} />
+//     </div>
+//     <h3>{name}</h3>
+//     <p>{role}</p>
+//   </div>
+// );
 
 const CounterItem = ({ icon, end, label, suffix = "" }) => {
   const [count, setCount] = useState(0);
@@ -171,16 +171,15 @@ const Home = () => {
       
 
        {/* Scrolling Notice */}
-    <section>
-       <marquee
-        className="notice-marquee"
-        direction="left"
-        scrollamount="6"
-      >
+  <section>
+  <div className="notice-marquee">
+    <div className="notice-text">
       Admissions Open for B.Tech, M.Tech & MBA | NAAC Accredited College |
       Approved by AICTE & Affiliated to JNTUH
-    </marquee>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     {/* <section className="notice-wave">
   <div className="notice-wave-track">
@@ -906,7 +905,7 @@ const Home = () => {
               <div class="gallery-item large">
             <iframe
               class="video-frame"
-              src="https://www.youtube.com/embed/aZ80PN-CmPk?autoplay=0&mute=1"
+               src="https://www.youtube.com/embed/FdshDW7NrvY?autoplay=0&mute=1"
               title="VCET Campus Tour"
               frameborder="0"
               allowfullscreen

@@ -2,8 +2,8 @@ import React from 'react'
 
 const TransportFee = () => {
   return (
-    <div>
-      <h3>TransportFee</h3>
+    <div className='notpermited-content'>
+      <h5>TransportFee</h5>
     </div>
   )
 }

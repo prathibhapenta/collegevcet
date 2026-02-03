@@ -2,7 +2,7 @@ import React from 'react'
 
 const Alumni = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>Alumni</h5>
     </div>
   )

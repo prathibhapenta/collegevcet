@@ -103,17 +103,11 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
       <ul className={`navbar-menu ${isMobileMenuOpen ? "open" : ""}`}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink></li>       
       <li className="nav-item dropdown">
-        <a
-          className={`nav-link dropdown-toggle ${isAboutActive ? "active" : ""}`}
-          href="#"
-          id="aboutDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          
+        <Link to="/about"
+          className={`nav-link dropdown-toggle ${isAboutActive ? "active" : ""}`}  
         >
           About Us
-        </a>
+        </Link>
       <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
   <li><Link className="dropdown-item" to="/about-us/the-college">The College</Link></li>
   <li><Link className="dropdown-item" to="/about-us/management">The Management</Link></li>
@@ -133,19 +127,23 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
 
       </li>
        <li className="nav-item dropdown">
-      <a className={`nav-link dropdown-toggle ${isCoursesActive ? "active" : ""}`}
-    href="#"
-    id="coursesDropdown"
-    data-bs-toggle="dropdown">
-    Courses
-  </a>
+    <Link
+  to="/courses"
+  className={`nav-link dropdown-toggle ${isCoursesActive ? "active" : ""}`}
+  id="coursesDropdown"
+>
+  Courses
+</Link>
+
    <ul className="dropdown-menu" aria-labelledby="coursesDropdown">
     {/* B.Tech */}
     <li className="dropdown-submenu">
-      <a className={`dropdown-item dropdown-toggle ${isBtechActive ? "active" : ""}`}
-    href="#">
-        B.Tech
-      </a>
+    <Link
+  to="/courses/btech"
+  className={`dropdown-item dropdown-toggle ${isBtechActive ? "active" : ""}`}
+>
+  B.Tech
+</Link>
       <ul className="dropdown-menu">
         <li className="dropdown-submenu">
           <Link className="dropdown-item dropdown-toggle" to="/cse/about">
@@ -160,9 +158,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            CSE(AI&ML)
-          </a>
+          <Link
+  to="/courses/btech/cseaiml/about"
+  className="dropdown-item dropdown-toggle"
+>
+  CSE(AI&ML)
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/cseaiml/about">About CSE(AI&ML)</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/cseaiml/hod">HOD</Link></li>
@@ -172,9 +173,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            CSE(DS)
-          </a>
+          <Link
+  to="/courses/btech/cseds/about"
+  className="dropdown-item dropdown-toggle"
+>
+  CSE(DS)
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/cseds/about">About CSE(DS)</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/cseds/hod">HOD</Link></li>
@@ -184,9 +188,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            AIML
-          </a>
+          <Link
+  to="/courses/btech/aiml/about"
+  className="dropdown-item dropdown-toggle"
+>
+  AIML
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/aiml/about">About AIML</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/aiml/hod">HOD</Link></li>
@@ -196,9 +203,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            ECE
-          </a>
+          <Link
+  to="/courses/btech/ece/about"
+  className="dropdown-item dropdown-toggle"
+>
+  ECE
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/ece/about">About ECE</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/ece/hod">HOD</Link></li>
@@ -208,9 +218,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            Civil
-          </a>
+          <Link
+  to="/courses/btech/civil/about"
+  className="dropdown-item dropdown-toggle"
+>
+  Civil
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/civil/about">About Civil</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/civil/hod">HOD</Link></li>
@@ -220,9 +233,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            EEE
-          </a>
+          <Link
+  to="/courses/btech/eee/about"
+  className="dropdown-item dropdown-toggle"
+>
+  EEE
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/eee/about">About EEE</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/eee/hod">HOD</Link></li>
@@ -233,9 +249,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            ME
-          </a>
+         <Link
+  to="/courses/btech/me/about"
+  className="dropdown-item dropdown-toggle"
+>
+  ME
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/me/about">About ME</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/me/hod">HOD</Link></li>
@@ -245,9 +264,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           </ul>
         </li>
         <li className="dropdown-submenu">
-          <a className="dropdown-item dropdown-toggle" href="#">
-            H & S
-          </a>
+         <Link
+  to="/courses/btech/hs/about"
+  className="dropdown-item dropdown-toggle"
+>
+  H & S
+</Link>
           <ul className="dropdown-menu">
             <li><Link className="dropdown-item" to="/courses/btech/hs/about">About H & S</Link></li>
             <li><Link className="dropdown-item" to="/courses/btech/hs/hod">HOD</Link></li>
@@ -261,9 +283,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
 
     {/* M.Tech */}
     <li className="dropdown-submenu">
-      <a className={`dropdown-item dropdown-toggle ${isMtechActive ? "active" : ""}`} href="#">
-        M.Tech
-      </a>
+     <Link
+  to="/courses/mtech/about"
+  className={`dropdown-item dropdown-toggle ${isMtechActive ? "active" : ""}`}
+>
+  M.Tech
+</Link>
 
       <ul className="dropdown-menu">
         <li><Link className="dropdown-item" to="/courses/mtech/embedded-system">Embedded System</Link></li>
@@ -273,9 +298,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
 
     {/* MBA */}
       <li className="dropdown-submenu">
-      <a  className={`dropdown-item dropdown-toggle ${isMBAActive ? "active" : ""}`} href="#">
-        MBA
-      </a>
+      <Link
+  to="/courses/mba/about"
+  className={`dropdown-item dropdown-toggle ${isMBAActive ? "active" : ""}`}
+>
+  MBA
+</Link>
     <ul className="dropdown-menu">
         <li>
           <Link className="dropdown-item" to="/courses/mba/about">
@@ -297,18 +325,13 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
       </ul>
     </li>
         <li className="nav-item dropdown">
-        <a
-    className={`nav-link dropdown-toggle ${
-      isInfrastructureActive ? "active" : ""
-    }`}
-    href="#"
-    id="infrastructureDropdown"
-    role="button"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Infrastructure
-  </a>
+  
+<Link
+  to="/infrastructure"  // main Infrastructure page
+  className={`nav-link dropdown-toggle ${isInfrastructureActive ? "active" : ""}`}
+>
+  Infrastructure
+</Link>
       <ul className="dropdown-menu" aria-labelledby="infrastructureDropdown">
           <li><Link className="dropdown-item" to="/infrascture/administrative-block">Administrative Block</Link></li>
           <li><Link className="dropdown-item" to="/infrascture/library">Library</Link></li>
@@ -319,26 +342,24 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
 
          <li><NavLink to="/iqac"className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}>IQAC</NavLink></li>
     <li className="nav-item dropdown">
-        <a
-          className="nav-link dropdown-toggle"
-          href="#"
-          id="campuslifeDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false">
-          CampusLife
-        </a>
+      
+<Link
+  to="/campuslife"  // main CampusLife page
+  className="nav-link dropdown-toggle"
+>
+  CampusLife
+</Link>
       <ul className="dropdown-menu" aria-labelledby="campuslifeDropdown">
         <li><Link className="dropdown-item" to="/infrascture/administrative-block">Administrative Block</Link></li>
         <li><Link className="dropdown-item" to="/infrascture/library">Library</Link></li>
-        <li><Link className="dropdown-item" to="/infrascture/digitallibrary">Digital Library</Link></li>
-          <li><Link className="dropdown-item" to="/infrascture/academic-regulations">Exam Branch</Link></li>
+        {/* <li><Link className="dropdown-item" to="/infrascture/digitallibrary">Digital Library</Link></li>
+          <li><Link className="dropdown-item" to="/infrascture/academic-regulations">Exam Branch</Link></li> */}
           <li><Link className="dropdown-item" to="/campuslife/auditorium">Auditorium</Link></li>
-          <li><Link className="dropdown-item" to="/campuslife/seminar-hall">Seminar Hall</Link></li>
-          <li><Link className="dropdown-item" to="/campuslife/drawing-hall">Drawing Hall</Link></li>
+          {/* <li><Link className="dropdown-item" to="/campuslife/seminar-hall">Seminar Hall</Link></li>
+          <li><Link className="dropdown-item" to="/campuslife/drawing-hall">Drawing Hall</Link></li> */}
           <li><Link className="dropdown-item" to="/campuslife/sports">sports</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/cafeteria">cafeteria</Link></li>
-          <li><Link className="dropdown-item" to="/campuslife/transport">Transport</Link></li>
+          {/* <li><Link className="dropdown-item" to="/campuslife/transport">Transport</Link></li> */}
           <li><Link className="dropdown-item" to="/campuslife/medical-facility">Medical Facility</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/internet">Internet</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/potable-water">Potable Water</Link></li> 
@@ -346,19 +367,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
       </li>
 
        <li className="nav-item dropdown">
-          <a
-    className={`nav-link dropdown-toggle ${isTransportActive ? "active" : ""}`}
-    href="#"   
-
-
-   
-    id="transportDropdown"
-    role="button"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    Transport
-  </a>
+        <Link
+  to="/transport"  // main Transport page
+  className={`nav-link dropdown-toggle ${isTransportActive ? "active" : ""}`}
+>
+  Transport
+</Link>
       <ul className="dropdown-menu" aria-labelledby="transportDropdown">
           <li><Link className="dropdown-item" to="/transport/about-transport">About Transport</Link></li>
           <li><Link className="dropdown-item" to="/transport/transport/routes">Routes</Link></li>
@@ -367,15 +381,12 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
       </li>
 
       <li className="nav-item dropdown">
-        <a
-          className="nav-link dropdown-toggle"
-          href="#"
-          id="admissionsDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Admissions
-        </a>
+       <Link
+  to="/admissions"  // main Admissions page
+  className="nav-link dropdown-toggle"
+>
+  Admissions
+</Link>
       <ul className="dropdown-menu" aria-labelledby="admissionsDropdown">
          <li><Link className="dropdown-item" to="/b.tech">B.Tech</Link></li>
           <li><Link className="dropdown-item" to="/m.tech">M.Tech</Link></li>
@@ -387,15 +398,13 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
         <li><NavLink to="/r-and-d"className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}>R&D</NavLink></li>
         <li><NavLink to="/alumni" className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}> Alumni</NavLink></li>
   <li className="nav-item dropdown">
-        <a
-          className="nav-link dropdown-toggle"
-          href="#"
-          id="placementsDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Placements
-        </a>
+        
+<Link
+  to="/placements"  // main Placements page
+  className="nav-link dropdown-toggle"
+>
+  Placements
+</Link>
       <ul className="dropdown-menu" aria-labelledby="placementsDropdown">
          <li><Link className="dropdown-item" to="/b.tech">B.Tech</Link></li>
           <li><Link className="dropdown-item" to="/m.tech">M.Tech</Link></li>

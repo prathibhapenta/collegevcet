@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutEce = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>About Ece</h5>
     </div>
   )

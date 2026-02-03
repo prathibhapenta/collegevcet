@@ -11,10 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.notpermited-content {
+  min-height: calc(100vh - 200px); /* take full viewport height minus footer height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 h5 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+
+.main-content {
+  flex: 1; /* Takes all space above footer */
 }

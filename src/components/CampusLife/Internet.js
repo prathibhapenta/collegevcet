@@ -2,7 +2,7 @@ import React from 'react'
 
 const Internet = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>Internet</h5>
     </div>
   )

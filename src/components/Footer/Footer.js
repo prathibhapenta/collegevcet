@@ -33,18 +33,21 @@ const Footer = () => {
           </p>
 
           <div className="vcet-footer-socials">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaYoutube />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp />
-            </a>
-            <a href="tel:+919581452787">
-              <FaPhone />
-            </a>
+           <Link to="/instagram" className="social-icon">
+  <FaInstagram />
+</Link>
+
+<Link to="/youtube" className="social-icon">
+  <FaYoutube />
+</Link>
+
+<Link to="/whatsapp" className="social-icon">
+  <FaWhatsapp />
+</Link>
+
+<Link to="/contact" className="social-icon">
+  <FaPhone />
+</Link>
           </div>
         </div>
 

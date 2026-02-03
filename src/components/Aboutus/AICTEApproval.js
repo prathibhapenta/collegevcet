@@ -2,7 +2,7 @@ import React from 'react'
 
 const AICTEApproval = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>AICTE Approval</h5>
     </div>
   )

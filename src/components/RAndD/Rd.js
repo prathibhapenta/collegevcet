@@ -2,8 +2,8 @@ import React from 'react'
 
 const Rd = () => {
   return (
-    <div>
-      <h1>R & D</h1>
+    <div className='notpermited-content'>
+      <h5>R & D</h5>
     </div>
   )
 }

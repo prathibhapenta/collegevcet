@@ -2,7 +2,7 @@ import React from 'react'
 
 const JNTUHAffiliation = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>JNTUH Affiliation</h5>
     </div>
   )

@@ -2,8 +2,8 @@ import React from 'react'
 
 const TransportRoutes = () => {
   return (
-    <div>
-      <h3>TransportRoutes</h3>
+    <div className='notpermited-content'>
+      <h5>TransportRoutes</h5>
     </div>
   )
 }

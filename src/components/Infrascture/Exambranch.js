@@ -2,8 +2,8 @@ import React from 'react'
 
 const Exambranch = () => {
   return (
-    <div>
-      <h3>Exambranch</h3>
+    <div className='notpermited-content'>
+      <h5>Exambranch</h5>
     </div>
   )
 }

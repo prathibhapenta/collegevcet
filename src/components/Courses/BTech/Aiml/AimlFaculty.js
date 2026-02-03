@@ -2,7 +2,7 @@ import React from 'react'
 
 const AimlFaculty = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>AIML Facility</h5>
     </div>
   )

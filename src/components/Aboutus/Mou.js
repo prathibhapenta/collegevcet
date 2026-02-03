@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mou = () => {
   return (
-    <div>
+    <div className='notpermited-content'>
       <h5>Mou</h5>
     </div>
   )
