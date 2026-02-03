@@ -571,7 +571,7 @@ body {
   padding-right: 30px;
 }
 .hero-content h4 {
-  font-size: 35px;
+  font-size: 55px;
   white-space: nowrap;     
   overflow: hidden;        
 }
@@ -942,9 +942,9 @@ body {
   transform: scale(1);              
   filter: brightness(1);             
 }
-.masonry-item:has(.arrow-icon:hover) .masonry-img  {
+/* .masonry-item:has(.arrow-icon:hover) .masonry-img  {
   transform: scale(1.10);            
-}
+} */
 .overlay {
   position: absolute;
   inset: 0;
@@ -960,59 +960,10 @@ body {
   font-weight: 600;
 }
 
-.arrow-icon {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-
-  background: linear-gradient(135deg, #6b5ca5, #9f8cff);
-  box-shadow: 0 10px 25px rgba(107, 92, 165, 0.4);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition: transform 0.35s ease, background 0.35s ease;
-}
-
-.arrow-icon:hover {
-  background: linear-gradient(135deg, #6b5ca5, #9f8cff);
-  box-shadow: 0 10px 25px rgba(107, 92, 165, 0.4);
-}
-
-.arrow-icon .icon {
-  font-size: 20px;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.arrow-icon:hover .icon {
-  transform: rotate(90deg);
-}
 
 
-.arrow-icon:hover {
-  
-  transform: scale(1.15);
-  background: rgba(255, 255, 255, 0.32);
-}
+/* show the div when hovered */
 
-/* Icons */
-.arrow-icon .icon {
-  font-size: 20px;
-  color: #fff;
-  transition: transform 0.25s ease;
-}
-
-.arrow-icon:hover .icon {
-  transform: rotate(90deg);
-}
 /* Overlay bottom */
 .overlay-bottom {
   position: absolute;
@@ -1063,6 +1014,90 @@ body {
 .card-content.active {
   top: 0; /* slide down into view */
 }
+
+.arrow-icon {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6b5ca5, #9f8cff);
+  box-shadow: 0 10px 25px rgba(107, 92, 165, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.arrow-icon:hover {
+  background: linear-gradient(135deg, #6b5ca5, #9f8cff);
+  box-shadow: 0 10px 25px rgba(107, 92, 165, 0.4);
+}
+
+.arrow-icon .icon {
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon:hover .icon {
+  transform: rotate(90deg);
+}
+
+
+.arrow-icon:hover {
+  
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* Icons */
+.arrow-icon .icon {
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.25s ease;
+}
+
+.arrow-icon:hover .icon {
+  transform: rotate(90deg);
+}
+/* Container for the text overlay (bottom of card) */
+.overlay-text-container {
+  position: absolute;
+  bottom: 60px; 
+  left: 24px;
+  right: 24px;
+  text-align: left;
+  z-index: 2; 
+  pointer-events: none; 
+}
+
+.overlay-text {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  font-size: 22px;
+  
+
+  display: inline-block;   
+  width: fit-content;      
+  max-width: 100%;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Optional: slide text slightly up on hover for effect */
+.masonry-item:hover .overlay-text {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
 
 /* Responsive – reduces columns on smaller screens */
 /* @media (max-width: 1024px) {
@@ -2098,12 +2133,24 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; 
+  display: inline-block; 
 }
 
 .oncampus-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
 }
+ .arrow-link {
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .arrow{
+    text-decoration: none;
+    display: inline-block;
+  }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -2764,6 +2811,9 @@ body {
 
   .arrow-link {
     font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
   }
    .vcet-feature-row-one,
   .vcet-feature-row-two {

@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa6";
 import "./ScrollToTop.css";
 
 const ScrollToTop = () => {
+  const { pathname } = useLocation(); // detect route changes
   const [showArrow, setShowArrow] = useState(false);
 
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [pathname]);
+
+  // Show/hide arrow on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {

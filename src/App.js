@@ -86,10 +86,12 @@ import Cafeteria from './components/CampusLife/Cafeteria';
 import Internet from './components/CampusLife/Internet';
 import MedicalFacility from './components/CampusLife/MedicalFacility';
 import PotableWater from './components/CampusLife/PotableWater';
+import Events from './components/CampusLife/Events';
 // import Seminarhall from './components/CampusLife/Seminarhall';
 import Sports from './components/CampusLife/Sports';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Placements from './components/Placements/Placements';
 const App = () => {
    const location = useLocation();
   const isHome = location.pathname === "/";
@@ -180,9 +182,10 @@ const App = () => {
         <Route path="/infrascture/digital-library" element={<DigitalLibrary />} />
         <Route path="/infrascture/exam-branch" element={<Exambranch />} />
         {/* campus Life*/}
-        
+         <Route path="/campuslife/labs" element={<Auditorium />} />
           <Route path="/campuslife/auditorium" element={<Auditorium />} />
           <Route path="/campuslife/cafeteria" element={<Cafeteria />} />
+          <Route path="/campuslife/events" element={<Events />} />
           {/* <Route path="/campuslife/drawinghall" element={<Drawinghall />} /> */}
           <Route path="/campuslife/internet" element={<Internet />} />
           <Route path="/campuslife/medical-facility" element={<MedicalFacility />} />
@@ -194,6 +197,8 @@ const App = () => {
         <Route path="/transport/transport/routes" element={<TransportRoutes />} />
         <Route path="/transport/transport/fee" element={<TransportFee />} />
 
+
+       <Route path="/placements/placements" element={<Placements />} />
       </Routes>
       <ScrollToTop />
       <Footer/>

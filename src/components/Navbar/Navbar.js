@@ -358,9 +358,11 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
           {/* <li><Link className="dropdown-item" to="/campuslife/seminar-hall">Seminar Hall</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/drawing-hall">Drawing Hall</Link></li> */}
           <li><Link className="dropdown-item" to="/campuslife/sports">sports</Link></li>
+           <li><Link className="dropdown-item" to="/campuslife/events">Events</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/cafeteria">cafeteria</Link></li>
           {/* <li><Link className="dropdown-item" to="/campuslife/transport">Transport</Link></li> */}
           <li><Link className="dropdown-item" to="/campuslife/medical-facility">Medical Facility</Link></li>
+          <li><Link className="dropdown-item" to="/campuslife/labs">Labs</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/internet">Internet</Link></li>
           <li><Link className="dropdown-item" to="/campuslife/potable-water">Potable Water</Link></li> 
         </ul>
@@ -397,20 +399,7 @@ const isInfrastructureActive = infrastructureRoutes.some(route =>
         <li><NavLink to="/naac"className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}> NAAC</NavLink></li>
         <li><NavLink to="/r-and-d"className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}>R&D</NavLink></li>
         <li><NavLink to="/alumni" className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}> Alumni</NavLink></li>
-  <li className="nav-item dropdown">
-        
-<Link
-  to="/placements"  // main Placements page
-  className="nav-link dropdown-toggle"
->
-  Placements
-</Link>
-      <ul className="dropdown-menu" aria-labelledby="placementsDropdown">
-         <li><Link className="dropdown-item" to="/b.tech">B.Tech</Link></li>
-          <li><Link className="dropdown-item" to="/m.tech">M.Tech</Link></li>
-          <li><Link className="dropdown-item" to="/mba">MBA</Link></li>
-        </ul>
-      </li>
+   <li><NavLink to="/placements/placements"className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}> Placements</NavLink></li>
          <li><NavLink to="/contact" className={({ isActive }) =>isActive ? "nav-link active" : "nav-link"}> Contact</NavLink></li>
       
           </ul>

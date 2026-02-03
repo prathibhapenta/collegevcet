@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
+
+import { Link } from "react-router-dom";
+
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -83,6 +86,13 @@ const videos = [
 ];
 
 const Home = () => {
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [isEceOverlayVisible, setIsEceOverlayVisible] = useState(false);
+  const [isCivilOverlayVisible, setIsCivilOverlayVisible] = useState(false);
+ const [isAimlOverlayVisible, setIsAimlOverlayVisible] = useState(false);
+const [isDsOverlayVisible, setIsDsOverlayVisible] = useState(false);
+const [isEeeOverlayVisible, setIsEeeOverlayVisible] = useState(false);
+
  const [activeIndex, setActiveIndex] = useState(0);
  const [isOpen, setIsOpen] = useState(false);
   // Automatic switch every 30 seconds
@@ -490,161 +500,248 @@ const Home = () => {
     <div className="masonry-container">
       {/* Masonry items – different heights */}
       <div className="masonry-item tall" data-aos="fade-up" data-aos-delay="100">
-        <img
-          src="/images/computers_lab.jpg"
-          alt="Engineering Lab"
-          className="masonry-img"
-        />
-        <div className="overlay">
-        <h3>Computer Science Engineering</h3>
-      <span
+      {/* Swap image based on overlay state */}
+      <img
+        src={isOverlayVisible ? "/images/cse_image.avif" : "/images/computers_lab.jpg"}
+        alt="Library & Research"
+        className="masonry-img"
+      />
+
+      {/* Overlay text */}
+      <div className="overlay-text-container">
+        {isOverlayVisible ? (
+          <p className="overlay-text">
+             Successful careers in CSE — Software Engineer, Developer, IT Professional.
+          </p>
+        ) : (
+          <p className="overlay-text">
+           Computer Science Engineering.
+          </p>
+        )}
+      </div>
+
+      {/* Icon */}
+      <div className="overlay-icon">
+        <span
           className="arrow-icon"
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsOpen(prev => !prev);
-          }}
+          onMouseEnter={() => setIsOverlayVisible(true)}
+          onMouseLeave={() => setIsOverlayVisible(false)}
         >
-          {isOpen ? (
-            <FiX className="icon close" />
-            
-          ) : (
-          
-            <FiPlus className="icon plus" />
-          )}
+          {isOverlayVisible ? <FiX className="icon close" /> : <FiPlus className="icon plus" />}
         </span>
       </div>
-      </div>
+    </div>
 
 
-      <div className="masonry-item medium" data-aos="fade-up" data-aos-delay="150">
-        <img
-          src="/images/ece_img.webp" // medium height
-          alt="Library & Research"
-          className="masonry-img"
-        />
-        <div className="overlay">
-          <h3>Ece</h3>
-          <span
-            className="arrow-icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(prev => !prev);
-            }}
-          >
-            {isOpen ? (
-              <FiX className="icon close" />
-              
-            ) : (
-            
-              <FiPlus className="icon plus" />
-            )}
-          </span>
-        </div>
-      </div>
+    <div className="masonry-item medium" data-aos="fade-up" data-aos-delay="150">
+  {/* Swap image based on ECE overlay state */}
+  <img
+    src={
+      isEceOverlayVisible
+        ? "/images/ece_success.jpg"
+        : "/images/ece_img.webp"
+    }
+    alt="ECE Department"
+    className="masonry-img"
+  />
+
+  {/* Overlay text */}
+  <div className="overlay-text-container">
+    {isEceOverlayVisible ? (
+      <p className="overlay-text">
+        Successful careers in ECE — VLSI Engineer, Embedded Systems, Communication Engineer.
+      </p>
+    ) : (
+      <p className="overlay-text">
+        Electronics and Communication Engineering.
+      </p>
+    )}
+  </div>
+
+  {/* Icon */}
+  <div className="overlay-icon">
+    <span
+      className="arrow-icon"
+      onMouseEnter={() => setIsEceOverlayVisible(true)}
+      onMouseLeave={() => setIsEceOverlayVisible(false)}
+    >
+      {isEceOverlayVisible ? (
+        <FiX className="icon close" />
+      ) : (
+        <FiPlus className="icon plus" />
+      )}
+    </span>
+  </div>
+</div>
+
 
       <div className="masonry-item medium" data-aos="fade-up" data-aos-delay="200">
-        <img
-          src="/images/civil_engineering.webp" // shorter image
-          alt="Academics"
-          className="masonry-img"
-        />
-        <div className="overlay">
-          <h3>Civil</h3>
-           <span
-            className="arrow-icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(prev => !prev);
-            }}
-          >
-            {isOpen ? (
-              <FiX className="icon close" />
-              
-            ) : (
-            
-              <FiPlus className="icon plus" />
-            )}
-          </span>
-        </div>
-      </div>
+  {/* Swap image based on Civil hover */}
+  <img
+    src={
+      isCivilOverlayVisible
+        ? "/images/civil_success.png"
+        : "/images/civil_engineering.webp"
+    }
+    alt="Civil Engineering"
+    className="masonry-img"
+  />
+
+  {/* Overlay text */}
+  <div className="overlay-text-container">
+    {isCivilOverlayVisible ? (
+      <p className="overlay-text">
+        Successful careers in Civil — Structural Engineer, Site Engineer, Project Manager.
+      </p>
+    ) : (
+      <p className="overlay-text">
+        Civil Engineering.
+      </p>
+    )}
+  </div>
+
+  {/* Icon */}
+  <div className="overlay-icon">
+    <span
+      className="arrow-icon"
+      onMouseEnter={() => setIsCivilOverlayVisible(true)}
+      onMouseLeave={() => setIsCivilOverlayVisible(false)}
+    >
+      {isCivilOverlayVisible ? (
+        <FiX className="icon close" />
+      ) : (
+        <FiPlus className="icon plus" />
+      )}
+    </span>
+  </div>
+</div>
+
 
       <div className="masonry-item tall" data-aos="fade-up" data-aos-delay="250">
-        <img
-          src="/images/eee_engineering.jpg" // taller again
-          alt="Sciences"
-          className="masonry-img"
-        />
-        <div className="overlay">
-          <h3>Eee</h3>
-          <span
-            className="arrow-icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(prev => !prev);
-            }}
-          >
-            {isOpen ? (
-              <FiX className="icon close" />
-              
-            ) : (
-            
-              <FiPlus className="icon plus" />
-            )}
-          </span>
-        </div>
-      </div>
+  {/* Swap image based on EEE hover */}
+  <img
+    src={
+      isEeeOverlayVisible
+        ? "/images/eee_success.jpg"
+        : "/images/eee_engineering.jpg"
+    }
+    alt="Electrical and Electronics Engineering"
+    className="masonry-img"
+  />
+
+  {/* Overlay text */}
+  <div className="overlay-text-container">
+    {isEeeOverlayVisible ? (
+      <p className="overlay-text">
+        Successful careers in EEE — Power Engineer, Electrical Design Engineer, Automation Specialist.
+      </p>
+    ) : (
+      <p className="overlay-text">
+        Electrical and Electronics Engineering.
+      </p>
+    )}
+  </div>
+
+  {/* Icon */}
+  <div className="overlay-icon">
+    <span
+      className="arrow-icon"
+      onMouseEnter={() => setIsEeeOverlayVisible(true)}
+      onMouseLeave={() => setIsEeeOverlayVisible(false)}
+    >
+      {isEeeOverlayVisible ? (
+        <FiX className="icon close" />
+      ) : (
+        <FiPlus className="icon plus" />
+      )}
+    </span>
+  </div>
+</div>
+
 
       <div className="masonry-item tall" data-aos="fade-up" data-aos-delay="300">
-        <img
-          src="/images/Aiml_img.webp"
-          alt="Campus Life"
-          className="masonry-img"
-        />
-        <div className="overlay">
-          <h3>AIML</h3>
-           <span
-            className="arrow-icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(prev => !prev);
-            }}
-          >
-            {isOpen ? (
-              <FiX className="icon close" />
-              
-            ) : (
-            
-              <FiPlus className="icon plus" />
-            )}
-          </span>
-        </div>
-      </div>
+  {/* Swap image based on AIML hover */}
+  <img
+    src={
+      isAimlOverlayVisible
+        ? "/images/AIML_success.png"
+        : "/images/Aiml_img.webp"
+    }
+    alt="Artificial Intelligence & Machine Learning"
+    className="masonry-img"
+  />
+
+  {/* Overlay text */}
+  <div className="overlay-text-container">
+    {isAimlOverlayVisible ? (
+      <p className="overlay-text">
+        Successful careers in AIML — AI Engineer, Machine Learning Engineer, Data Scientist.
+      </p>
+    ) : (
+      <p className="overlay-text">
+        Artificial Intelligence & Machine Learning.
+      </p>
+    )}
+  </div>
+
+  {/* Icon */}
+  <div className="overlay-icon">
+    <span
+      className="arrow-icon"
+      onMouseEnter={() => setIsAimlOverlayVisible(true)}
+      onMouseLeave={() => setIsAimlOverlayVisible(false)}
+    >
+      {isAimlOverlayVisible ? (
+        <FiX className="icon close" />
+      ) : (
+        <FiPlus className="icon plus" />
+      )}
+    </span>
+  </div>
+</div>
+
 
     <div className="masonry-item medium" data-aos="fade-up" data-aos-delay="200">
-        <img
-          src="/images/Ds_engineering.webp" // shorter image
-          alt="Academics"
-          className="masonry-img"
-        />
-        <div className="overlay">
-          <h3>Data Science</h3>
-           <span
-            className="arrow-icon"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsOpen(prev => !prev);
-            }}
-          >
-            {isOpen ? (
-              <FiX className="icon close" />
-              
-            ) : (
-            
-              <FiPlus className="icon plus" />
-            )}
-          </span>
-        </div>
-      </div>
+  {/* Swap image based on Data Science hover */}
+  <img
+    src={
+      isDsOverlayVisible
+        ? "/images/datascience_success.jpeg"
+        : "/images/Ds_engineering.webp"
+    }
+    alt="Data Science"
+    className="masonry-img"
+  />
+
+  {/* Overlay text */}
+  <div className="overlay-text-container">
+    {isDsOverlayVisible ? (
+      <p className="overlay-text">
+        Successful careers in Data Science — Data Scientist, Data Analyst, Machine Learning Engineer.
+      </p>
+    ) : (
+      <p className="overlay-text">
+        Data Science Engineering.
+      </p>
+    )}
+  </div>
+
+  {/* Icon */}
+  <div className="overlay-icon">
+    <span
+      className="arrow-icon"
+      onMouseEnter={() => setIsDsOverlayVisible(true)}
+      onMouseLeave={() => setIsDsOverlayVisible(false)}
+    >
+      {isDsOverlayVisible ? (
+        <FiX className="icon close" />
+      ) : (
+        <FiPlus className="icon plus" />
+      )}
+    </span>
+  </div>
+</div>
+
 
       {/* Add more items – heights will auto-vary based on image */}
     </div>
@@ -924,7 +1021,9 @@ const Home = () => {
 
             <div className="overlay-bottom">
               <h3>LABS</h3>
-              <span className="arrow">→</span>
+             <Link to="/courses/btech/cse/labs" className="arrow-link">
+  <span className="arrow">→</span>
+</Link>
             </div>
           </div>
 
@@ -956,7 +1055,9 @@ const Home = () => {
         </video>
             <div class="overlay-bottom">
               <h3>Events</h3>
-              <span class="arrow">→</span>
+             <Link to="/campuslife/events" className="arrow-link">
+  <span className="arrow">→</span>
+</Link>
             </div>
           </div>
 
@@ -971,8 +1072,10 @@ const Home = () => {
           <source src="/images/sports.mp4" type="video/mp4" />
         </video>
             <div class="overlay-bottom">
-              <h3>Sports</h3>
-              <span class="arrow">→</span>
+              <h3>Sports</h3> 
+             <Link to="/campuslife/sports" className="arrow-link">
+  <span className="arrow">→</span>
+</Link>
             </div>
           </div>
           <div class="gallery-item medium">
@@ -987,7 +1090,9 @@ const Home = () => {
         </video>
             <div class="overlay-bottom">
               <h3>Independence Day</h3>
-              <span class="arrow">→</span>
+              <Link to="/campuslife/events" className="arrow-link">
+  <span className="arrow">→</span>
+</Link>
             </div>
           </div>
 
@@ -1091,9 +1196,9 @@ const Home = () => {
       />
     </div>
 
-    <button className="primary-btn oncampus-btn">
-       About Placements
-    </button>
+    <Link to="/placements/placements" className="primary-btn oncampus-btn">
+  About Placements
+</Link>
   </div>
 </section>
     </div>
