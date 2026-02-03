@@ -1,0 +1,315 @@
+
+/* VCET News & Events Section */
+.vcet-news-events {
+  background: linear-gradient(135deg, #f4f9ff 45%, #73a1da 100%);
+  padding: 80px 0;
+}
+
+.vcet-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+}
+.vcet-news,
+.vcet-events {
+  width: 50%;
+  padding: 35px;
+  border-radius: 16px;
+}
+
+/* 📰 NEWS PANEL */
+/* .vcet-news {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+} */
+
+/* 📅 EVENTS PANEL */
+/* .vcet-events {
+  background: linear-gradient(160deg, #0b6e75, #17a2a5);
+  color: #ffffff;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+} */
+
+.vcet-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1d6fa5 !important;
+}
+
+.vcet-title svg {
+  font-size: 34px;
+  color: #1d6fa5;
+}
+
+.vcet-events .vcet-title svg {
+  color: #1d6fa5;
+}
+
+.vcet-news .vcet-title {
+  color: #0b3c5d;
+}
+
+.vcet-events .vcet-title {
+ color: #1d6fa5;
+}
+
+.vcet-scroll-wrapper {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+.vcet-scroll-content {
+  display: flex;
+  flex-direction: column;
+  animation: vcetScrollUp 6s linear infinite;
+}
+.vcet-scroll-wrapper:hover .vcet-scroll-content {
+  animation-play-state: paused;
+}
+.vcet-scroll-content p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 12px;
+  border-bottom: 1px dashed #ddd;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+.vcet-scroll-content p svg {
+  color: #ff6600;
+  font-size: 14px;
+}
+
+.vcet-scroll-content p:hover {
+  color: #ff6600;
+  transform: translateX(6px);
+}
+
+.vcet-event-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  align-items: center;
+}
+
+.vcet-date-box {
+  background: #ffffff;
+  color: #ff6600;
+  padding: 14px;
+  text-align: center;
+  min-width: 75px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.vcet-date-box h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.vcet-date-box span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vcet-event-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.vcet-event-item p {
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vcet-event-item p svg {
+  color: #ff6600;
+  font-size: 16px;
+}
+
+.vcet-btn {
+  margin-top: 28px;
+  background: #1d6fa5;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vcet-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 122, 24, 0.45);
+}
+
+@keyframes vcetScrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .vcet-container {
+    flex-direction: column;
+  }
+
+  .vcet-news,
+  .vcet-events {
+    width: 100%;
+  }
+
+  .vcet-title {
+    font-size: 26px;
+  }
+}
+
+
+.top-header {
+  background: #ffffff;
+}
+
+.container.header-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+  gap: 20%;
+  align-items: center;
+}
+
+.college-brand {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.college-main-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.college-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 82px;
+  font-weight: 900;
+  color: #d71920;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.college-name span {
+  display: block;
+  margin-top: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f3c88;
+  letter-spacing: 1.5px;
+}
+
+.college-sub-text {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+  flex-wrap: nowrap;
+}
+
+.college-text p {
+  font-size: 14px;
+  margin: 0;
+  color: #ff6600;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: -300px;
+}
+
+.accreditation-logos {
+  display: flex;
+  gap: 20px;
+}
+
+.acc-logo {
+  height: 85px;
+  width: auto;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.acc-logo:hover {
+  transform: scale(1.08);
+}
+
+.college-title-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.visvesvaraya-portrait {
+  height: 100px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid #ff6600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .college-sub-text {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container.header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .college-sub-text {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .right-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

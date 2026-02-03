@@ -1,0 +1,153 @@
+.vcet-footer {
+  background: #0b1c2d;
+  color: #d9e2ec;
+  padding: 60px 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.vcet-footer-content {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.vcet-footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.vcet-footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+ 
+
+}
+
+.vcet-footer-logo-img {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius:450px;
+}
+
+.vcet-footer-logo h2 {
+  font-size: 34px;
+  color: #ffffff;
+}
+
+.vcet-footer-section.about p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #b8c6d8;
+  margin-bottom: 18px;
+}
+
+.vcet-footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.vcet-footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.vcet-footer-socials a:hover {
+  background: #ff9900;
+  transform: translateY(-3px);
+}
+
+.vcet-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vcet-footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #b8c6d8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vcet-footer-section ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vcet-footer-section ul li:hover {
+  color: #ff9900;
+  padding-left: 6px;
+}
+
+.vcet-footer-section.contact p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b8c6d8;
+}
+
+.vcet-footer-section.contact svg {
+  color: #ff9900;
+}
+
+.vcet-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aab7c4;
+}
+
+.vcet-footer-bottom .dev-credit {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #8faad1;
+}
+
+@media (max-width: 1024px) {
+  .vcet-footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vcet-footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .vcet-footer-logo {
+    justify-content: center;
+  }
+
+  .vcet-footer-socials {
+    justify-content: center;
+  }
+
+  .vcet-footer-section ul li:hover {
+    padding-left: 0;
+  }
+
+  .vcet-footer-section.contact p {
+    justify-content: center;
+  }
+}

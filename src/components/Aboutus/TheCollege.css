@@ -1,0 +1,33 @@
+
+
+.college-container {
+ max-width: 90vw;
+  margin: auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.college-heading {
+  text-align: center;
+  color: #0b3c5d;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.college-container h3 {
+  color: #0b3c5d;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.college-container p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  text-align: justify;
+}
