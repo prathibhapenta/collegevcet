@@ -1075,7 +1075,7 @@ body {
 }
 
 .overlay-text {
-  background: rgba(0, 0, 0, 0.55);
+  /* background: rgba(0, 0, 0, 0.55); */
   color: #fff;
 
   padding: 10px 14px;
